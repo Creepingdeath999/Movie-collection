@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <script src="https://use.fontawesome.com/607a2eb51d.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="empty" class="visible">
+      <button>Add Movie</button>
+    </div>
+    <div id="addmovie">
+      <div>
+        <h2>Name</h2>
+        <input id="name" type="text" name="movieName" placeholder="Enter Movie Name" />
+      </div>
+      <div>
+          <div>
+              <h2>Director:</h2>
+              <input type="text" id="director" placeholder="Movie Director">
+          </div>
+        <h2>Genre</h2>
+        <input id="genre" list="Genre" name="movieGenre" placeholder="Movie Genre" />
+        <datalist id="Genre">
+          <option value="Drama"></option>
+          <option value="Comedy"></option>
+          <option value="Fantasy"></option>
+          <option value="Action"></option>
+          <option value="Horror"></option>
+        </datalist>
+      </div>
+      <div class="additional">
+        <div>
+          <h2>Rating</h2>
+          <input id="rating" type="number" min="1" max="10" placeholder="Movie Rating" />
+        </div>
+        <div>
+          <h2>date</h2>
+          <input id="date"
+            type="number"
+            min="1800"
+            max="2021"
+            placeholder="Release Date"
+          />
+        </div>
+      </div>
+      <div>
+        <h2>Image Source</h2>
+        <input id="imgUrl" type="url" placeholder="Cover Source (url)" />
+      </div>
+      <div class="btns">
+          <button>Add Movie</button>
+          <button>Cancel</button>
+      </div>
+    </div>
+    <div id="movies">
+        <div class="header">
+            <button>Add Movie</button>
+        </div>
+    </div>
+  </body>
+</html>

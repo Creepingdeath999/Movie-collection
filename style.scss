@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+$darkBlue: #29434e;
+$lightBlue: #819ca9;
+
+body {
+  background-color: $darkBlue;
+}
+
+#empty {
+  width: 80%;
+  height: 300px;
+  //background-color:$lightBlue ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  button {
+    padding: 40px 100px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: $lightBlue;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+  }
+}
+
+#addmovie {
+  width: 50%;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  .additional {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    div {
+      width: 45%;
+    }
+  }
+  div {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 200;
+    }
+    input {
+      border: none;
+      padding: 15px;
+      text-align: center;
+      outline: none;
+      border: 3px solid $lightBlue;
+      border-radius: 10px;
+      margin: 5px 0px;
+      font-size: 1.4rem;
+    }
+  }
+  .btns{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      button {
+        padding: 15px 40px;
+        outline: none;
+        border: 3px solid $lightBlue;
+        border-radius: 10px;
+        margin: 5px;
+
+        cursor: pointer;
+        &:hover {
+          background-color: $lightBlue;
+          color: #fff;
+        }
+      }
+  }
+}
+
+#movies {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 20px;
+  justify-content: flex-start;
+  display:none;
+  .header {
+    width: 100%;
+    height: 40px;
+    background-color: $lightBlue;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      padding: 7px;
+      outline: none;
+      border: 3px solid $lightBlue;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  .movie {
+    width: 300px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    margin: 30px;
+
+    .fa{
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      cursor: pointer;
+    }
+    div:first-child {
+      width: 100%;
+      height: 200px;
+      padding: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    div {
+      display: flex;
+      justify-content: start;
+      font-size: 0.7rem;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      padding: 10px;
+      h1 {
+        margin: 0px 10px;
+      }
+      h1:last-child{
+          color:rgb(185, 185, 24);
+      }
+    }
+    div:last-child {
+      border: none;
+    }
+    button {
+      padding: 7px 5px;
+      outline: none;
+      border: 3px solid $lightBlue;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+.visible{
+    display: flex !important;
+}
+.invisible{
+    display: none !important;
+}
